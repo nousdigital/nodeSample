@@ -1,0 +1,56 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "NOUS Sample Project",
+    "description": "It's a nodeJS sample project",
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Deployed server url"
+    },
+    {
+      "url": "http://localhost:6565",
+      "description": "Local server url"
+    }
+  ],
+  "paths": {
+    "/sample/v1.0/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "description": "health check service",
+        "responses": {
+          "200": {
+            "description": "health status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HealthDto": {
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "msg": {
+            "type": "string",
+            "description": "a human readable health message"
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

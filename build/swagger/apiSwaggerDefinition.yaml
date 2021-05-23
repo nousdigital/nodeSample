@@ -1,0 +1,11 @@
+openapi: "3.0.0"
+info:
+    title: "NOUS Sample Project"
+    description: "It's a nodeJS sample project"
+    version: "0.0.1"
+
+servers:
+    - url: "/"
+      description: Deployed server url
+    - url: "http://localhost:6565"
+      description: Local server url
