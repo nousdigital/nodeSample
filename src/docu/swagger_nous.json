@@ -49,6 +49,40 @@
             "description": "a human readable health message"
           }
         }
+      },
+      "PetDto": {
+        "required": [
+          "name",
+          "externalId"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "externalId": {
+            "type": "number"
+          },
+          "version": {
+            "type": "number"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedBy": {
+            "type": "string"
+          }
+        }
       }
     }
   },

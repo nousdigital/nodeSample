@@ -35,7 +35,7 @@ export class DbHelper {
     return new Promise(resolve => {
       connect(mongoDBConnectionString, options, (err: any) => {
         if(err) {
-          console.error(err.message);
+          console.log(`DB CONNECT ERROR: ${err}`);
         } else {
           console.info(`mongodb interface:`);
           console.info(`mongodb host: ${dbConfig.host}`);
@@ -45,10 +45,7 @@ export class DbHelper {
         }
 
         resolve();
-      }).catch(err => {
-        console.log(`DB CONNECT ERROR: ${err}`);
-        resolve();
-      });
+      })
     });
   }
 }

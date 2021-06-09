@@ -23,6 +23,10 @@ npm run build
 ```
 
 To start the module you need a locally running MongoDB. To do so, you can use the *docker-compose.yml* in the */docker* folder.
+```
+docker-compose up
+```
+
 The MongoDB is exposed on port 27017.
 Finally, start the module by running the following command via your command line tool within the project directory:
 ```

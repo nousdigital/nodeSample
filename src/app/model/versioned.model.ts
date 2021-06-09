@@ -9,7 +9,6 @@ export abstract class VersionedModel<E extends VersionedEntity> {
 
   protected constructor(
     public id: string,
-    public tenantId: string,
     public version?: number,
     public createdOn?: Date,
     public createdBy?: string,

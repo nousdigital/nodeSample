@@ -1,3 +1,3 @@
 export enum EntityEnum {
-  DATA = 'data',
+  PET = 'pet',
 }
