@@ -1,15 +1,16 @@
-import express = require("express");
-import { NextFunction, Request, Response } from "express";
-import { Router } from "express-serve-static-core";
+import express = require('express');
+import { NextFunction, Request, Response } from 'express';
+import { Router } from 'express-serve-static-core';
 import { RouterInterface } from '../api/router/router.interface';
-import logger from "../util/logger";
+import logger from '../util/logger';
 import { HealthDto } from '../api/dto/health.dto';
+
 const version = require('../../../package.json').version;
 
 export class HealthRouter implements RouterInterface {
 
   public createRoutes(): Router {
-    logger.info("HealthRouter#initRoutes...");
+    logger.info('HealthRouter#initRoutes...');
 
     const router = express.Router();
 
